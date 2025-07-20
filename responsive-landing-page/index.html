@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BrightVision - Light UI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #e6ebf0, #f4f7fa);
+      color: #222;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(250, 250, 250, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 50px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+      transition: background 0.3s;
+    }
+
+    header.scrolled {
+      background: #ffffff;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #1976d2;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #1976d2;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 100px 50px 50px;
+      background: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1400&q=80') no-repeat center/cover;
+      color: #fff;
+    }
+
+    .hero-content {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px 50px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      max-width: 600px;
+      color: #222;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .hero-content h1 {
+      font-size: 42px;
+      color: #1976d2;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      background: #1976d2;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #0d47a1;
+      box-shadow: 0 0 15px rgba(25, 118, 210, 0.6);
+    }
+
+    section {
+      padding: 100px 60px;
+      scroll-margin-top: 80px;
+    }
+
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #1976d2;
+    }
+
+    section p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    footer .footer-links {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+
+    footer .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    footer .footer-links a:hover {
+      color: #fff;
+    }
+
+    footer .social-icons a {
+      margin: 0 10px;
+      color: #1976d2;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    footer .social-icons a:hover {
+      color: #64b5f6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        padding: 80px 20px;
+        text-align: center;
+      }
+
+      .hero-content {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      footer .footer-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header id="navbar">
+    <div class="logo">BrightVision</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Design with Vision</h1>
+      <p>Build attractive, responsive websites with simplicity and clarity. Welcome to the future of web design.</p>
+      <a href="#features" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <section id="features">
+    <h2>Features</h2>
+    <p>
+      ✨ Smooth Scrolling Navigation: Experience seamless transitions between sections with built-in smooth scroll behavior.<br><br>
+      🔒 Fixed and Sticky Header: Navigate your content with ease thanks to a modern fixed navbar that adapts on scroll.<br><br>
+      📱 Fully Responsive Layout: Designed to look great on mobile, tablet, and desktop devices with optimized spacing and flexible grids.<br><br>
+      🎨 Clean and Light-Themed Design: Enjoy a modern UI with soft colors, clear typography, and consistent styling for a fresh, professional look.<br><br>
+      ⚡ Fast and Lightweight: Built using pure HTML, CSS, and JS for fast load times without any external libraries.<br><br>
+      🔧 Easy Customization: All components are modular and easy to style or extend. Whether you’re a beginner or expert, this layout scales to your needs.<br><br>
+      🌐 SEO Ready: Semantic HTML structure ensures better visibility on search engines.
+    </p>
+  </section>
+
+  <section id="about" style="background:#f7f9fb">
+    <h2>About Us</h2>
+    <p>
+      At BrightVision, we believe that a great website is more than just design — it's an experience. We specialize in creating intuitive digital products that are both beautiful and functional.<br><br>
+      Our team of passionate designers, developers, and strategists work together to craft user-first experiences that deliver real results. From startups to large enterprises, we help businesses bring their ideas to life through stunning visuals and scalable code.<br><br>
+      With a strong focus on simplicity, performance, and accessibility, BrightVision empowers teams to build faster and grow smarter.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@brightvision.com<br>Phone: +91 98765 43210</p>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="social-icons">
+      <a href="#">🌐</a>
+      <a href="#">📘</a>
+      <a href="#">📷</a>
+    </div>
+    <p>&copy; 2025 BrightVision. All rights reserved.</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
+</body>
+</html>
